@@ -1,102 +1,69 @@
-* {
-    font-family: Arial;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+*{
+  font-family: 'Poppins';
 }
 
-body {
-    margin: 0;
+body{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #320D57;
+}
+
+.container{
+  display: flex;
+  width: 90%;
+  margin: auto;
 }
 
 /* Começo do cabeçalho */
 
-.container {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    height: 125px;
-
-}
-
-.container .logo img {
-    width: 316px;
-    height: 215px;
-    display: flex;
-    margin-left: -105px;
-    margin-top: 20px;
-    align-items: center
-}
-
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-}
-
-.header ul {
-    width: 600px;
-}
-
-.header ul #home {
-    font-weight: 700;
-    color: #320D57;
-    text-align: center;
-}
-
-
-.header ul #empresa {
-    color: #320D57;
-
-}
-
-.header ul #login {
-    color: #320D57;
-}
-
-.header ul button {
-    /* color: white; */
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    background-color: #7D1E7C;
-
-}
-
-.header ul button #button {
-    color: white;
-}
-
-ul {
-    color: #320D57;
-    padding: 20px;
-    height: 420px;
-}
-
-
-
-
-.titulo {
-    color: #32b9cd;
-    width: fit-content;
-    font-weight: 500;
-}
-
-.navBar {
-    width: 350px;
-    height: 20px;
-    padding: 0;
-    list-style: none;
-    display: flex;
+.header{
+    background-color: #ffffff;
+    border-bottom: solid #8B49CD 3px;
+    padding: 15px;
+  }
+  
+  .header .container{
     justify-content: space-between;
     align-items: center;
+  }
+  
+  .logoNav{
+    width: 150px;
+    height: 40px;
+  }
+  
+  .navBar{
+    width: 600px;
+    display: flex;
     color: #320D57;
-}
-
-.navL {
-    color: #320D57;
-    text-decoration: none;
-} 
-
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  
+  .ativo{
+    font-weight: 1000;
+    color: #6a2b69;
+    text-shadow: 1px 0px 1px #320D57;
+  }
+  
+  .sombra{
+    text-shadow: 1px 2px 3px #c2bdb0;
+  }
+  
+  .btnCadastro{
+    background-color: #7D1E7C;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 4px 10px 4px 10px;
+    font-size: 14px;
+    border: none;
+  }
 /* Fim do cabeçalho */
 
 /* Começo do Banner */
@@ -135,87 +102,42 @@ ul {
 
 /* Começo do Social */
 
-.social {
-    background-color: #7D1E7C26;
-    /* display: flex; */
-    height: 400px;
-    width: 100%;
-    margin-bottom: 0;
-    /* justify-content: center; */
-}
-
-
-.card img {
-    /* width: 400px;
-    height: 350px;
-    margin-right: 15px; */
-    height: 380px;
-    margin-right: 15px;
-    margin-top: 400px;
-}
-
-.social .container .card {
-    display: flex;
-    width: 100%;
-    height: 5px;
+.baseboard{
+    background-color:#8B49CD3D;
+    border-top: solid #8B49CD 3px;
+    padding: 15px;
+  }
+  
+  .baseboard .containerBase{
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
-}
-
- 
- .social .card div {
- 
-    color: #320D57;
     display: flex;
-    /* justify-content: space-between; */
-    /* align-content: center; */
-    height: 5px;
-    width: 120px;
-    /* word-wrap: break-word; */
-    /* text-indent: 50%; */
+  }
+  
+  .logoBase{
+    width: 130px;
+    height: 120px;
+  }
+  
+  .titulo{
     font-weight: 1000;
-    /* margin-left: 80px; */
-    margin-bottom: 30px;
-    margin-top: 280px;
-    /* text-align: center; */
-    
-
-
- }
-
- .card ul #lista2 div{
+    font-size: 18px;
+  }
+  
+  .contato{
     display: flex;
-    justify-content: flex-start;
- }
-
-
- .card ul li{
-    /* text-align: right; */
-    text-decoration: none;
+    color: #320D57;
     list-style: none;
+    flex-direction: column;
+    font-size: 16px;
+  }
+  
+  .socialMedia{
     display: flex;
-    justify-content: space-around;   
-    margin-left: 80px;
-    /* height: 13px; */
-    width: 185px;
-    margin-bottom: 13px;
-
- } 
-
- .card ul #lista1 {
-    height: 13px;
-    width: 180px;
-    margin-left: 80px;
-    color: black
-   
- }
-
-.card ul #lista2 {
-    height: 13px;
-    width: 180px;
-    margin-left: 80px;
-    margin-bottom: 18px;
-    padding: 5px;
-}
-
+    color: #320D57;
+    list-style: none;
+    flex-direction: column;
+    font-size: 16px;
+  }
+  
 /* Final do Social */
