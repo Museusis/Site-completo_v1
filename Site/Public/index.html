@@ -1,133 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="Css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Começo do Header -->
-    <div class="header">
-      <div class="container">
-        <img class="logoNav" src="img/logo_navBar.png" />
-        <ul class="navBar">
-          <li class="ativo">Home</li>
-          <li>Sobre nós</li>
-          <li>Para sua empresa</li>
-         <a href="ajuda.html"> <li class="sombra">Ajuda</li> </a>
-          <li class="sombra">Login</li>
-          <button onclick="btnCadastro()" class="btnCadastro">
-            Cadastre-se
-          </button>
-        </ul>
-      </div>
-    </div>
-    <!-- Fim do Header -->
 
-    <!-- Começo do Banner -->
-    <div class="banner">
-      <div class="container">
-        <h1>
-          Venha cuidar das suas Obras de Arte
-          <img class="banner_png" src="img/banner_png.png" />
-        </h1>
-        <img class="img_banner" src="img/banner_img.png" />
-      </div>
-    </div>
-    <!-- Fim do Banner -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="Css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="img/4188037.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+</head>
 
-    <!-- Começo do Sobre -->
-    <div class="bannerSobre">
-      <div class="container">
-        <div class="sobre">
-          <h3>Sobre Nós</h3>
-          <p>
-            Somos uma empresa de Tecnologia especializada em digitalizar
-            processos dentro do mercado da arte.
-            <span class="space"></span>
-            Temos como objetivo otimizar a sua empresa!
-          </p>
-        </div>
-        <img class="img_solucoes" src="img/Solução_imagem.png" />
-      </div>
+<body>
+  <!-- Começo do Header -->
+  <div class="header">
+    <div class="container">
+      <img class="logoNav" src="img/logo_navBar.png" />
+      <ul class="navBar">
+        <li class="ativo">Home</li>
+        <li class="sombra">Sobre nós</li>
+        <li class="sombra">Para sua empresa</li>
+        <a href="ajuda.html">
+          <li class="sombra">Ajuda</li>
+        </a>
+        <li class="sombra">Login</li>
+        <button onclick="btnCadastro()" class="btnCadastro">
+          Cadastre-se
+        </button>
+      </ul>
     </div>
-    <div class="borda"></div>
-    <!-- Fim do Sobre -->
+  </div>
+  <!-- Fim do Header -->
 
-    <!-- Começo do Solucoes -->
-    <div class="solucoes">
-      <h3>Soluções</h3>
-      <div class="container">
-        <div class="card">
-          <h4>Automatização</h4>
-          <p>
-            Reduza custos e aumente a precisão dos processos na sua empresa.
-          </p>
-        </div>
-        <div class="card">
-          <h4>Gerenciamento</h4>
-          <p>
-            Gerencie melhor seu negócio por meio de um sistema mais organizado e
-            otimizado.
-          </p>
-        </div>
-        <div class="card">
-          <h4>Análise de Dados</h4>
-          <p>
-            Construa um modelo de negócio definido a partir de um histórico de
-            dados da sua empresa.
-          </p>
-        </div>
-      </div>
+  <!-- Começo do Banner -->
+  <div class="banner">
+    <div class="container">
+      <h1>
+        Venha cuidar das suas Obras de Arte
+        <img class="banner_png" src="img/banner_png.png" />
+      </h1>
+      <img class="img_banner" src="img/banner_img.png" />
     </div>
-    <div class="borda"></div>
-    <!-- Fim do Solucoes -->
+  </div>
+  <!-- Fim do Banner -->
 
-    <!-- Começo do Simule -->
-    <div class="simule">
-      <div class="containerSimule">
-        <img class="img_simule" src="img/Design sem nome - 2023-03-10T223842 1 (1).png" />
-        <div class="simuleTxt">
-          <h3>Simule Aqui!</h3>
-          <p>
-            Veja na prática o beneficio de nossos serviços. Simule o quanto sua
-            empresa recuperaria!
-          </p>
-          <button onclick="btnSimular()" class="btnSimular">Simule!</button>
-        </div>
+  <!-- Começo do Sobre -->
+  <div class="bannerSobre">
+    <div class="container">
+      <div class="sobre">
+        <h3>Sobre Nós</h3>
+        <p>
+          Somos uma empresa de Tecnologia especializada em digitalizar
+          processos dentro do mercado da arte.
+          <span class="space"></span>
+          Temos como objetivo otimizar a sua empresa!
+        </p>
       </div>
+      <img class="img_solucoes" src="img/Solução_imagem.png" />
     </div>
-    <!-- Fim do Simule -->
+  </div>
+  <div class="borda"></div>
+  <!-- Fim do Sobre -->
 
-    <!-- Começo do Baseboard -->
-    <div class="baseboard">
-      <div class="containerBase">
-        <img class="logoBase" src="img/logo_base.png" />
-        <ul class="contato">
-          <li class="titulo">Contato</li>
-          <li>(11) 98268-9775</li>
-          <li>artech@solutions.com.br</li>
-          <li>Rua Haddock Lobo, 595</li>
-          <li>Bela Vista</li>
-          <li>CEP 03912-932</li>
-        </ul>
-        <ul class="socialMedia">
-          <li class="titulo">Fale Conosco</li>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>Linkedin</li>
-          <li>Whatsapp</li>
-        </ul>
+  <!-- Começo do Solucoes -->
+  <div class="solucoes">
+    <h3>Soluções</h3>
+    <div class="container">
+      <div class="card">
+        <h4>Automatização</h4>
+        <p>
+          Reduza custos e aumente a precisão dos processos na sua empresa.
+        </p>
+      </div>
+      <div class="card">
+        <h4>Gerenciamento</h4>
+        <p>
+          Gerencie melhor seu negócio por meio de um sistema mais organizado e
+          otimizado.
+        </p>
+      </div>
+      <div class="card">
+        <h4>Análise de Dados</h4>
+        <p>
+          Construa um modelo de negócio definido a partir de um histórico de
+          dados da sua empresa.
+        </p>
       </div>
     </div>
-    <!-- Fim do Baseboard -->
-  </body>
+  </div>
+  <div class="borda"></div>
+  <!-- Fim do Solucoes -->
+
+  <!-- Começo do Simule -->
+  <div class="simule">
+    <div class="containerSimule">
+      <img class="img_simule" src="img/Design sem nome - 2023-03-10T223842 1 (1).png" />
+      <div class="simuleTxt">
+        <h3>Simule Aqui!</h3>
+        <p>
+          Veja na prática o beneficio de nossos serviços. Simule o quanto sua
+          empresa recuperaria!
+        </p>
+        <button onclick="btnSimular()" class="btnSimular">Simule!</button>
+      </div>
+    </div>
+  </div>
+  <!-- Fim do Simule -->
+
+  <!-- Começo do Baseboard -->
+  <div class="baseboard">
+    <div class="containerBase">
+      <img class="logoBase" src="img/logo_base.png" />
+      <ul class="contato">
+        <li class="titulo">Contato</li>
+        <li>(11) 98268-9775</li>
+        <li>artech@solutions.com.br</li>
+        <li>Rua Haddock Lobo, 595</li>
+        <li>Bela Vista</li>
+        <li>CEP 03912-932</li>
+      </ul>
+      <ul class="socialMedia">
+        <li class="titulo">Fale Conosco</li>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Linkedin</li>
+        <li>Whatsapp</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Fim do Baseboard -->
+</body>
+
 </html>
