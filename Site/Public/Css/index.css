@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+*{
+  font-family: 'Poppins';
+}
+
+body{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #320D57;
+}
+
+.container{
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+/* Começo do Header */
+.header{
+  background-color: #ffffff;
+  border-bottom: solid #8B49CD 3px;
+  padding: 15px;
+}
+
+.header .container{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoNav{
+  width: 150px;
+  height: 40px;
+}
+
+.navBar{
+  width: 600px;
+  display: flex;
+  color: #320D57;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.ativo{
+  font-weight: 1000;
+  color: #6a2b69;
+  text-shadow: 1px 0px 1px #320D57;
+}
+
+.sombra{
+  text-shadow: 1px 2px 3px #c2bdb0;
+}
+
+.btnCadastro{
+  background-color: #7D1E7C;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 4px 10px 4px 10px;
+  font-size: 14px;
+  border: none;
+}
+/* Fim do Header */
+
+/* Começo do Banner */
+.banner {
+  width: 100%;
+  height: 500px;
+}
+
+.banner .container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.container h1{
+  font-size: 75px;
+  width: 500px;
+  line-height: 95px;
+}
+
+.img_banner{
+  height: 500px;
+}
+
+.banner_png{
+  position: absolute;
+  padding-left: 90px;
+  height: 150px;
+  width: 150px;
+}
+/* Fim do Banner */
+
+/* Começo do Sobre */
+/* .bannerSobre {
+  width: 90%;
+  height: 400px;
+  margin: auto;
+} */
+
+.bannerSobre .container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.container h3{
+  color:#7D1E7C;
+  font-size: 35px;
+  width: 500px;
+  font-weight: 1000px;
+  margin: 0px 0px 0px 10px;
+}
+
+.bannerSobre .container p{
+  color:#7D1E7C;
+  font-size: 19px;
+  width: 320px;
+  margin: 0;
+}
+
+.space{
+  display: flex;
+  padding: 10px;
+}
+
+.img_solucoes{
+  width: 350px;
+  height: 400px;
+  position: relative;
+  top: 60px;
+}
+
+.borda{
+  margin: auto;
+  width: 70%;
+  border-bottom: solid #8B49CD 1px;
+}
+
+/* Fim do Sobre */
+
+/* Começo do Solucoes */
+
+.solucoes{
+  margin: auto;
+  width: 80%;
+}
+
+.solucoes h3{
+  display: flex;
+  color:#7D1E7C;
+  font-size: 35px;
+  font-weight: 1000px;
+  margin: 15px;
+  justify-content: center;
+}
+
+.solucoes .container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.card h4{
+  color: #7D1E7C;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.card p{
+  width: 170px;
+  font-size: 16px;
+  text-align: start;
+  color: #320D57;
+  background-color: #7D1E7C26;
+  margin: 0;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.borda{
+  margin: auto;
+  width: 75%;
+  border-bottom: solid #8B49CD 1px;
+}
+/* Fim do Solucoes */
+
+/* Começo do Simule */
+.simule {
+  width: 80%;
+  height: 400px;
+  margin: auto;
+}
+
+.simule .containerSimule{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.simule .containerSimule .simuleTxt{
+  width: 300px;
+}
+
+.containerSimule h3{
+  color:#FFB614;
+  font-size: 35px;
+  width: 500px;
+  font-weight: 1000px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.simule .containerSimule p{
+  color:#320D57;
+  font-size: 18px;
+  width: 320px;
+  width: 250px;
+}
+
+.img_simule{
+  width: 350px;
+  height: 300px;
+}
+
+.btnSimular{
+  background-color: #FFB614;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  padding: 15px 100px 15px 90px;
+  margin-top: 25px;
+}
+
+/* Fim do Simule */
+
+/* Começo do Baseboard */
+.baseboard{
+  background-color:#8B49CD3D;
+  border-top: solid #8B49CD 3px;
+  padding: 15px;
+}
+
+.baseboard .containerBase{
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.logoBase{
+  width: 130px;
+  height: 120px;
+}
+
+.titulo{
+  font-weight: 1000;
+  font-size: 18px;
+}
+
+.contato{
+  display: flex;
+  color: #320D57;
+  list-style: none;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.socialMedia{
+  display: flex;
+  color: #320D57;
+  list-style: none;
+  flex-direction: column;
+  font-size: 16px;
+}
+/* Fim do Baseboard */

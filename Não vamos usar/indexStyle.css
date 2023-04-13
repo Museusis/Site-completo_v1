@@ -1,0 +1,170 @@
+/* Aspectos Gerais */
+*{
+    font-family: Arial;
+}
+
+body{
+    margin: 0;
+    background: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+/* Fim Aspectos Gerais */
+
+/* Começo do Header */
+.header .container{
+    justify-content: space-between;
+}
+.navBar {
+    width: 500px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header ul #aqui{
+    font-weight: 1000;
+    color: #974b96;
+    /* #ffb614;  */
+}
+.header .container ul li{
+    color: #7d1e7c;
+}
+.header .container ul li button{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #7d1e7c;
+    color: white;
+    cursor: pointer;
+}
+
+/* Fim do Header */
+
+/* Começo do Banner */
+
+.banner{
+    height: 500px;
+}
+.banner .container{
+    align-items: end;
+}
+.banner .container p{
+    width: 33%;
+    font-size: 50px; 
+    font-weight: 1000;  
+}
+.banner .container #lupa{
+    height: 30%; 
+    width: 120px;
+}
+.banner .container #museu{
+    height: 100%;
+    width: 500px;
+}
+/* Fim do Banner */
+
+/* Começo do Social */
+
+.social .container{
+    height: 300px;
+    justify-content: space-around;
+}
+.social .container .card{
+    flex-direction: column;
+    width: 30%;
+}
+.social .container h1{
+    font-weight: 800;
+    color: #7D1E7C;
+}
+.social .container p {
+    color: #320D57;
+    font-weight: 400;
+}
+.social .container img{
+    width: 32%;
+    height: 300px;
+}
+
+/* Fim do Social */
+
+/* Começo Soluções */
+
+.solucoes h1{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: #7D1E7C;  
+}
+.solucoes .container{
+    justify-content: space-around;
+}
+.solucoes .container h4{
+    display: flex;
+    justify-content: center;
+    color: #7D1E7C;
+    font-weight: 600;
+}
+.solucoes .container .card{
+    margin: 70px;
+    padding: 14px;
+    background:rgba(125, 30, 124, 0.15);
+    border-radius: 20px;
+    height: 155px; 
+}
+.solucoes .container .card p{
+    width: 180px;
+    color: #320D57;
+}
+
+/* Fim Soluções */
+
+/* Começo Footer */
+
+.footer{
+    background-color: #e2d3f2;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer .container ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .container ul li{
+    display: flex;
+    width: 300px;
+    padding: 0;
+    list-style: none;
+    justify-content: start;
+    color: #7d1e7c;
+}
+
+.footer .container .navBar2{
+    width: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer #Contato{
+    font-weight: bold;
+}
+.footer #Fale{
+    font-weight: bold;
+}

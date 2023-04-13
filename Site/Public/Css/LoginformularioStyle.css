@@ -1,0 +1,110 @@
+
+
+.formulario h1 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #7D1E7C;
+    font-weight: 800;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-left: 10px;
+}
+
+
+
+
+ .formulario {
+    display: flex;
+    /* flex-direction: column; */
+    width: 250px;
+    height:300px ;
+    background: white; 
+    margin-top: 100px;
+    text-align: center;
+    justify-content: flex-start;
+    justify-content: flex-start;
+    margin-left: 35px;
+    align-self: center;
+
+} 
+
+.formulario .caixa{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background: white;
+    align-self: center;
+    margin-bottom: 175px;
+    justify-content:flex-start;
+    margin-right: 50px;
+}
+
+.formulario .caixa .normal{
+    font-size: 15px;
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.formulario .caixa .lado{
+    font-size: 15px;
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    text-align:left;
+    margin-left: 20px;
+
+}
+
+
+.caixa input{
+    padding: 10px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px #1732612e;
+    border: none;
+    width: 310px;
+    margin: auto;
+    
+}
+
+
+.caixa button {
+    margin-top: 10px;
+    background: #FFB614;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 350px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.caixa button a {
+    font-weight: 300;
+    color: #fff;
+}
+
+/* .formulario .style span a #conta{
+    font-size: 15px;
+    color:black; 
+} */
+
+img#vetor{
+    display: flex;
+    /* width: 400px; */
+    height: 400px;
+    margin-top: -90px;
+    margin-left: 200px;
+    justify-items: center;
+    align-items: end;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="simulador_financeiro.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container_logo"> <!-- container-logo -->
+            <div class="logo">
+                <img src="C:\Users\paulo\OneDrive\Área de Trabalho\simulador\Logo.png" alt="">
+            </div>
+        </div>
+        <div class="container_navbar"><!-- container-navbar -->
+            <div class="navbar">
+                <ul>
+                    <li id="home"> <a></a>Home</li>
+                    <li> <a></a>Sobre nós</li>
+                    <li> <a></a>Para sua Empresa</li>
+                    <li> <a></a>Ajuda</li>
+                    <li> <a></a>Login</li>
+                </ul>
+                <button class="button-navbar">Cadastre-se</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="corpo">
+        <div class="titulo">
+            <h1>Simulador Financeiro</h1>
+        </div>
+        <div class="container-centro">
+            <div class="container-simulador">
+                <div class="simulador">
+                    Preço do Ingresso:
+                    <input type="text" id="input_preco">
+                    Gasto anual de reparo a quadros:
+                    <input type="text" id="input_gasto_reparo">
+                    Gasto geral do último ano:
+                    <input type="text" id="input_gasto_ano">
+                    Média de visitantes anuais:
+                    <input type="text" id="input_visitantes">
+                </div>
+            </div>
+            <div class="container-button">
+                <div class="button">
+                    <button onclick="simule()">Simulação</button>
+                </div>
+            </div>
+            <div class="container-mensagem">
+                <div class="mensagem" id="div_mensagem"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="logo2">
+            <img src="C:\Users\paulo\OneDrive\Área de Trabalho\simulador\logo-footer.png" alt="">
+        </div>
+        <div class="faleconosco">
+            <ul>
+                <li>xpto@sptech.school</li>
+                <li>xpto@sptech.school</li>
+                <li>xpto@sptech.school</li>
+                <li>xpto@sptech.school</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function simule() {
+        var visita = Number(input_visitantes.value)
+        var preco = Number(input_preco.value);
+        var reparo = Number(input_gasto_reparo.value);
+        var gasto = Number(input_gasto_ano.value);
+        var porcent_reparo = (reparo * 100) / gasto;
+        var bruto = visita * preco;
+        var perda_desnes = bruto - reparo;
+        div_mensagem.innerHTML = `Atualmente ${porcent_reparo}% do seu gasto anual são investimentos em reparo de peças. Em outras lentes, de ${ bruto} que são arrecadados anualmente com a venda de ingressos, ${ perda_desnes} são perdidos com o reparo de peças. Ambos são paralelamente verdade e podem ser evitados conosco! `
+    }
+</script>
