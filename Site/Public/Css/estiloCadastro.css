@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 *{
@@ -19,7 +20,7 @@ a{
   margin: auto;
 }
 
-/* Começo do cabeçalho */
+/* começo da header */
 
 .header{
     background-color: #ffffff;
@@ -59,46 +60,62 @@ a{
     padding: 4px 10px 4px 10px;
     font-size: 14px;
     border: none;
-    cursor: pointer;
   }
+
 /* Fim do cabeçalho */
 
 /* Começo do Banner */
 
-
-
 .banner {
-    height: 500px;
     display: flex;
-    background-color: white;
+    height: 800px;
+    width: 100%;
+    
 }
 
 .banner .container p span {
     font-weight: 1000;
 }
 
-
-
-
 .banner .container {
     font-size: 36px;
     justify-content: start;
+    height: 200px;
 }
 
-.banner .container p {
-    width: 30%;
-}
-
- .roxo_claro{
-    color:#8B49CD;
-    text-decoration: none;
-    font-weight: 50;
-} 
 
 /* Fim do banner */
 
 /* Começo do Social */
+.social {
+    background-color: beige;
+    display: flex;
+}
 
+.box img {
+    width: 170px;
+}
+
+.social .container .boxes {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social p {
+    text-align: center;
+}
+
+/* Final do Social */
+
+/* Começo do Baseboard */
 .baseboard{
     background-color:#8B49CD3D;
     border-top: solid #8B49CD 3px;
@@ -136,5 +153,4 @@ a{
     flex-direction: column;
     font-size: 16px;
   }
-  
-/* Final do Social */
+  /* Fim do Baseboard */

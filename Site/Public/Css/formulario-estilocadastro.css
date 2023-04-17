@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+*{
+  font-family: 'Poppins';
+}
+
+body{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #320D57;
+}
+
+.container{
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.banner .container{
+    margin: 50px ;
+    height: 700px;
+    justify-content: space-between;
+}
+
+
+.caixa_formulario {
+    /* background: rgb(118, 185, 197);
+    width: 450px; */
+    color: rgb(72, 25, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.caixa_formulario h1 {
+    font-size: 30px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%
+}
+
+.formulario button {
+    margin-top: 10px;
+    background: #350e13;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 60%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.formulario input {
+    /* padding: 10px 15px;
+    text-align: center;
+    border: 2px solid rgb(82, 143, 196);
+    /* border-radius: 10px; */
+    /* margin-block-start : 5px ; */ 
+    
+    padding: 9px;
+    text-align: center;
+    /* margin-block-start: 6px; */
+}
+
+.formulario span {
+    font-size: 20px;
+}
+.div{
+    /* margin: 100px;
+    display: flex;
+    justify-content:space-between ;
+flex-direction: row-reverse;
+    height: 50px;
+    */
+    margin: 210px;
+    display: flex;
+    height: 50px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+   
+}
+.imgCadastro{
+    /* margin: 100px;
+    display: flex;
+    height: 50px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;     */
+    /* margin-left: 590px; */
+    /* height: 500px; */
+    /* margin-top: -159px; */
+
+    display: flex;
+    align-items: Center;
+    
+}
+
+
+

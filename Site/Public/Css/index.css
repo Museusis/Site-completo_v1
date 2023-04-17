@@ -50,10 +50,6 @@ a{
   text-shadow: 1px 0px 1px #320D57;
 }
 
-.sombra{
-  text-shadow: 1px 2px 3px #c2bdb0;
-}
-
 .btnCadastro{
   background-color: #7D1E7C;
   color: #FFFFFF;
@@ -62,6 +58,7 @@ a{
   padding: 4px 10px 4px 10px;
   font-size: 14px;
   border: none;
+ cursor: pointer;
 }
 /* Fim do Header */
 
