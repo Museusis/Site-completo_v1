@@ -74,16 +74,20 @@ input#duvida_input {
     height: 100px;
 }
 button {
-    background-color: #b28fd4;
+    background-color: #FFB614;
     width: 200px;
     height: 50px;
     border-radius: 20px;
     border-style: none;
 }
+button a {
+  font-weight: 300;
+  color: #fff;
+}
 
 .banner {
     height: 500px;
-    min-height: 900px;
+    min-height: 730px;
     display: flex;
     background-color: white;
 }
