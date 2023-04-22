@@ -67,7 +67,7 @@
                     <span>Confirme a Senha:</span>
                     <input id="Confesenha_input" type="password" placeholder="*******">
 
-                    <button>Cadastrar</button>
+                    <button onclick="cadastrar()">Cadastrar</button>
                 </div>
             </div>
 
@@ -107,3 +107,52 @@
 </body>
 
 </html>
+
+<script>
+
+function cadastrar(){
+  var Nome = nome_input.value;
+  var Sobrenome = Sobrenome_input.value;
+  var dtNasc = Date_input.value;
+  var CPF = Cpf_input.value;
+  var CNPJ = Cpf_input.value;
+  var Cidade = Cidade_input.value;
+  var CEP = Cep_input.value;
+  var Email = email_input.value;
+  var Senha = senha_input.value;
+  var ConfirSenha = Confesenha_input.value;
+
+
+  if (Nome == "" || Sobrenome == "" || dtNasc == "" || CPF == "" ||  CNPJ == "" || Cidade == "" || CEP == "" || Email == "" || Senha == "" || ConfirSenha == "" ) {
+            alert("Há campos que não foram preenchidos");
+        }
+    
+  // Validação do email para saber se tem @
+  if (Email.indexOf('@') >= 0 ){
+        }else {
+          alert("Email inválido! Falta @");
+        }
+// Validação de senha para saber se ela tem no mínimo 7 digítos
+if (Senha.length > 6){
+        }else{
+          alert("Senha inválida! Mínimo de 7 Digítos");
+        }
+// Validação de senha para saber se elas são iguais
+  if ( ConfirSenha == Senha){
+  }else{
+    alert("As senhas não coincidem!")
+  }
+ // Validação de CPF para saber se ele tem 11 caracteres o - e os 2 .
+         if (CPF.length > 13){
+        }else{
+           alert("CPF inválido! Exemplo: 123.456.789-00");
+        }
+  // Validação de CEP para saber se ele possui 9 caracteres
+        if (CEP.length > 8){
+        }else {
+          alert("CEP inválido! Exemplo: 01001-000");
+        }
+}
+
+
+</script>
