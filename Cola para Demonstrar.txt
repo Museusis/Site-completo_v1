@@ -1,0 +1,18 @@
+Cola para poder realizar os testes:
+
+E se deixar algum campo em branco ele também mostra um alert.
+
+Nome que dá acesso: Fernado
+Sobrenome que dá acesso: Brandão
+Data de Nascimento: Não coloquei validação
+CPF: 123.456.789-00 - Dá acesso , Qualquer outra coisa não dará acesso.
+     Para poder testar o alert do CPF: 123.456.789-0
+Cidade: Não coloquei validação
+Cep: 01001-00 - Dá acesso, qualquer outro não dará acesso.
+     Para poder testar o alert do Cep: 01001-0
+e-mail: fernando.brandão@sptech.school - Dá acesso , Qualquer outra coisa não dará acesso
+	Para poder testar o alert do E-mail: fernando.brandãosptech.school
+senha: 1234567 - Dá acesso, qualquer outra não dará acesso.
+       Para poder testar o alert da senha: 123456	
+Confirmação de senha: 1234567 - Dá acesso.
+	Para poder testar o alert da confirmação de senha: Coloque qualquer coisa diferente do que foi colocado em Senha.

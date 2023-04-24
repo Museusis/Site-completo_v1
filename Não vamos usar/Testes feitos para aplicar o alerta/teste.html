@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Div alert</title>
+    <link rel="stylesheet" href="teste.css">
+    <script src="teste.js"></script>
+
+</head>
+<body>
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+
+
+    <div class="campo">
+        <span>Nome:</span>
+        <input id="nome_input" type="text" placeholder="Seu nome">
+    </div>
+    <div class="campo">
+        <span>E-mail:</span>
+        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+    </div>
+    <div class="campo">
+        <span>CPF:</span>
+        <input id="cpf_input" type="text" placeholder="Seu CPF">
+    </div>
+    <div class="campo">
+        <span>Senha:</span>
+        <input id="senha_input" type="password" placeholder="******">
+    </div>
+    <div class="campo">
+        <span>Confirmação da Senha:</span>
+        <input id="confirmacao_senha_input" type="password" placeholder="******">
+    </div>
+    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+
+</div>
+<div id="div_aguardar" class="loading-div">
+    <img src="https://media.tenor.com/UnFx-k_lSckAAAAM/amalie-steiness.gif" id="loading-gif">
+</div>
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar(){
+     var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var cpfVar = cpf_input.value;
+
+
+        // Validações
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || cpfVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+        // Validação do email para saber se tem @
+        if (emailVar.indexOf('@') >= 0 ){
+            setInterval(sumirMensagem, 5000)
+        }else {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Email inválido! Falta @";
+            finalizarAguardar();
+            return false;
+        }
+    
+        // Validação de senha para saber se ela tem no mínimo 7 digítos
+        if (senhaVar.length > 6){
+            setInterval(sumirMensagem, 5000)
+        }else{
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Senha inválida! Mínimo de 7 Digítos";
+
+            finalizarAguardar();
+            return false;
+        }
+        if (senhaVar == confirmacaoSenhaVar ){
+            setInterval(sumirMensagem, 5000)
+        }else{
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "As senhas não coincidem! Verifique elas";
+
+            finalizarAguardar();
+            return false;
+        }
+        if (cpfVar.length > 13){
+            setInterval(sumirMensagem, 5000)
+        }else{
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "CPF inválido! Exemplo: 123.456.789-00";
+            finalizarAguardar();
+            return false;
+        }
+
+            verificar()
+    }
+        function verificar(){
+            // Como as inputs estavam sendo criadas apenas  na função cadastrar, decide copiar para essa função
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var cpfVar = cpf_input.value;
+        
+        if (nomeVar == "Fernando Brandão" && emailVar == "fernando.brandão@sptech.school" && senhaVar == "1234567" && confirmacaoSenhaVar == "1234567" && cpfVar == "123.456.789-00"){
+    cardErro.style.display = "block";
+
+    mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+    setTimeout(() => {
+        window.location = "login.html";
+    }, "2000")
+
+    limparFormulario();
+    finalizarAguardar();
+} else {
+    throw ("Houve um erro ao tentar realizar o cadastro!");
+    }
+}  
+
+</script>
