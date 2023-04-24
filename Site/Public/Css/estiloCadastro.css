@@ -86,6 +86,54 @@ a{
 
 /* Fim do banner */
 
+/* Começo da Div alerta */
+
+#div_erros_login {
+  display: none
+}
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: #7D1E7C 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Fim Div alerta */
+
+/* Começo div carregamento */
+.loading-div {
+  width: 50px;
+  display: none;
+}
+
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+/* Fim div carregamento */
+
 /* Começo do Social */
 .social {
     background-color: beige;
