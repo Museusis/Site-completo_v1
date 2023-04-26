@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="img/4188037.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+    <script src="Js/AlertaDiv.js"></script>
 </head>
 
 <body>
@@ -37,6 +38,14 @@
 
     <!-- Começo do Banner -->
 
+      <!-- Começo Div alerta -->
+  <div class="alerta_erro">
+    <div class="card_erro" id="cardErro">
+      <span id="mensagem_erro"></span>
+    </div>
+  </div>
+  <!-- Fim Div alerta -->
+
     <div class="banner">
         <div class="container">
             <div class="formulario">
@@ -51,8 +60,15 @@
 
                     <span class="normal">Não tem uma conta?<a href="Cadastro.html" class="roxo_claro">Cadastre-se</a></span>
 
-                    <button onclick="login"> <a href="" class="navL">Login</a> </button>
+                    <button onclick="logar()"> <a href="" class="navL">Login</a> </button>
                 </div>
+
+                  <!-- Começo Div Aguardar -->
+      <div id="div_aguardar" class="loading-div">
+        <img src="img/gifLoading.gif" id="loading-gif">
+      </div>
+      <!-- Fim Div Aguardar -->
+
                 <img id="vetor"src="img\Mobile login-amico 2.png" alt=" ">
             </div>
         </div>
@@ -87,3 +103,28 @@
 </body>
 
 </html>
+<script>
+    function logar(){
+        var Email = email_input.value;
+        var Senha = senha_input.value;
+
+        if (Email == "fernando.brandão@sptech.school" && Senha == "1234567"){
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "Bem vindo, Brandão";
+
+    // setTimeout é um método do JavaScript que funciona como um temporizador.
+    // () = > se chama anônima arrow function, como ela é anônima, ela não possui nome, pois ela será usada apenas uma vez então não é necessário ter um.
+    // E a escolha dela ser arrow aqui é mais por preferência do Dev
+    // window.location é um objeto do JavaScript que permite redirecionarmos a (URL) da nossa página por meio de um Script.
+
+    setTimeout(() => {
+        window.location = "login.html";
+    }, "2000")
+
+    limparFormulario();
+    finalizarAguardar();
+} else {
+    throw ("Houve um erro ao tentar realizar o cadastro!");
+    }
+} 
+</script>
