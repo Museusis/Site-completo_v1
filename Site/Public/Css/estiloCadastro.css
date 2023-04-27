@@ -88,9 +88,9 @@ a{
 
 /* Começo da Div alerta */
 
-#div_erros_login {
+/* #div_erros_login {
   display: none
-}
+}  Rever se isso aqui é necssário mesmo*/
 
 .alerta_erro{
   display: flex;

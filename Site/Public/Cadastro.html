@@ -133,7 +133,7 @@
     var Sobrenome = Sobrenome_input.value;
     var dtNasc = Date_input.value;
     var CPF = Cpf_input.value;
-    var CNPJ = Cpf_input.value;
+    // var CNPJ = Cpf_input.value;
     var Cidade = Cidade_input.value;
     var CEP = Cep_input.value;
     var Email = email_input.value;
@@ -141,7 +141,7 @@
     var ConfirSenha = Confesenha_input.value;
 
 
-    if (Nome == "" || Sobrenome == "" || dtNasc == "" || CPF == "" || CNPJ == "" || Cidade == "" || CEP == "" || Email == "" || Senha == "" || ConfirSenha == "") {
+    if (Nome == "" || Sobrenome == "" || dtNasc == "" || CPF == "" || Cidade == "" || CEP == "" || Email == "" || Senha == "" || ConfirSenha == "") {
       cardErro.style.display = "block"
       mensagem_erro.innerHTML ="Há campos que não foram preenchidos";
       finalizarAguardar();
@@ -238,7 +238,6 @@
         window.location = "login.html";
     }, "2000")
 
-    limparFormulario();
     finalizarAguardar();
 } else {
     throw ("Houve um erro ao tentar realizar o cadastro!");
