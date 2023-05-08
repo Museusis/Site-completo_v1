@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtTech - Login</title>
+
+    <!-- Aqui colocamos o link para o arquivo de estilização-->
+    <link rel="stylesheet" href="Css/Loginstyle.css">
+    <link rel="stylesheet" href="Css/LoginformularioStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="img/4188037.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+    <script src="Js/funcoes.js"></script>
+</head>
+
+<body>
+    <!-- Nosso cabeçalho -->
+    <div class="header">
+        <div class="container">
+            <img  class="logoNav" src="img/logo_navBar.png" alt="logo"> 
+
+            <ul class="navBar">
+                <li id="home"> <a href="index.html" class="navL">Home</a></li>
+                <li id="empresa"> <a href="simulador_financeiro.html" class="navL">Simulador Financeiro</a> </li>
+                <li id="ajuda"> <a href="ajuda.html" class="navL">Ajuda</a></li>
+                <li id="login" class="ativo"> Login</a> </li>
+                <a href="Cadastro.html"> <button onclick="btnCadastro()" class="btnCadastro">
+                    Cadastre-se
+                  </button></a>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Começo do Banner -->
+
+    <div class="banner">
+         <!-- Começo Div alerta -->
+  <div class="alerta_erro">
+    <div class="card_erro" id="cardErro">
+      <span id="mensagem_erro"></span>
+    </div>
+  </div>
+  <!-- Fim Div alerta -->
+        <div class="container">
+            <div class="formulario">
+                <div class="caixa">
+                    <h1>Login</h1>
+
+                    <span class="lado">E-mail:</span>
+                    <input id="email_input" type="email" placeholder="Seu E-mail">
+                    
+                    <span class="lado">Senha:</span>
+                    <input id="senha_input" type="password" placeholder="*******">
+
+                    <span class="normal">Não tem uma conta?<a href="Cadastro.html" class="roxo_claro">Cadastre-se</a></span>
+
+                    <button onclick="logar()"> <a href="" class="navL">Login</a> </button>
+                </div>
+
+                  <!-- Começo Div Aguardar -->
+      <div id="div_aguardar" class="loading-div">
+        <img src="img/gifLoading.gif" id="loading-gif">
+      </div>
+
+      <div id="div_erros_login"></div>
+      <!-- Fim Div Aguardar -->
+
+                <img id="vetor"src="img\Mobile login-amico 2.png" alt=" ">
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Banner -->
+    <!-- Inicio do social -->
+    
+    <div class="baseboard">
+        <div class="containerBase">
+          <img class="logoBase" src="img/logo_base.png" />
+          <ul class="contato">
+            <li class="titulo">Contato</li>
+            <li>(11) 98268-9775</li>
+            <li>artech@solutions.com.br</li>
+            <li>Rua Haddock Lobo, 595</li>
+            <li>Bela Vista</li>
+            <li>CEP 03912-932</li>
+          </ul>
+          <ul class="socialMedia">
+            <li class="titulo">Fale Conosco</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Linkedin</li>
+            <li>Whatsapp</li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- Fim do social -->
+
+</body>
+
+</html>
+<script>
+    function logar(){
+      aguardar();
+
+      var Email = email_input.value;
+      var Senha = senha_input.value;
+
+      if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (Email == "fernando.brandão@sptech.school" && Senha == "1234567"){
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "Bem vindo, Brandão";
+
+    // setTimeout é um método do JavaScript que funciona como um temporizador.
+    // () = > se chama anônima arrow function, como ela é anônima, ela não possui nome, pois ela será usada apenas uma vez então não é necessário ter um.
+    // E a escolha dela ser arrow aqui é mais por preferência do Dev
+    // window.location é um objeto do JavaScript que permite redirecionarmos a (URL) da nossa página por meio de um Script.
+
+    setTimeout(() => {
+        window.location = "Dashboard/painel.html";
+    }, "2000")
+
+    limparFormulario();
+    finalizarAguardar();
+} else {
+    throw ("Houve um erro ao tentar realizar o cadastro!");
+    }
+} 
+</script>
