@@ -88,9 +88,9 @@ a{
 
 /* Começo da Div alerta */
 
-/* #div_erros_login {
+ #div_erros_login {
   display: none
-}  Rever se isso aqui é necssário mesmo*/
+}
 
 .alerta_erro{
   display: flex;
@@ -119,12 +119,6 @@ a{
 /* Começo div carregamento */
 .loading-div {
   width: 50px;
-  display: none;
-}
-
-.loading-div {
-  width: 50px;
-  margin: auto;
   display: none;
 }
 

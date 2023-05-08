@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="img/4188037.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-    <script src="Js/AlertaDiv.js"></script>
+    <script src="Js/funcoes.js"></script>
 </head>
 
 <body>
@@ -36,15 +36,15 @@
 
     </div>
 
-    <!-- Começo do Banner -->
-
-      <!-- Começo Div alerta -->
+<!-- Começo Div alerta -->
   <div class="alerta_erro">
-    <div class="card_erro" id="cardErro">
-      <span id="mensagem_erro"></span>
-    </div>
+     <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
   </div>
-  <!-- Fim Div alerta -->
+<!-- Fim Div alerta -->
+  
+<!-- Começo do Banner -->
 
     <div class="banner">
         <div class="container">
@@ -60,13 +60,15 @@
 
                     <span class="normal">Não tem uma conta?<a href="Cadastro.html" class="roxo_claro">Cadastre-se</a></span>
 
-                    <button onclick="logar()"> <a href="" class="navL">Login</a> </button>
+                    <button onclick="entrar()"> <a href="" class="navL">Login</a> </button>
                 </div>
 
                   <!-- Começo Div Aguardar -->
       <div id="div_aguardar" class="loading-div">
         <img src="img/gifLoading.gif" id="loading-gif">
       </div>
+
+      <div id="div_erros_login"></div>
       <!-- Fim Div Aguardar -->
 
                 <img id="vetor"src="img\Mobile login-amico 2.png" alt=" ">
@@ -104,27 +106,72 @@
 
 </html>
 <script>
-    function logar(){
-        var Email = email_input.value;
-        var Senha = senha_input.value;
+    function entrar(){
+      aguardar();
 
-        if (Email == "fernando.brandão@sptech.school" && Senha == "1234567"){
-    cardErro.style.display = "block";
-    mensagem_erro.innerHTML = "Bem vindo, Brandão";
+      var Email = email_input.value;
+      var Senha = senha_input.value;
 
-    // setTimeout é um método do JavaScript que funciona como um temporizador.
-    // () = > se chama anônima arrow function, como ela é anônima, ela não possui nome, pois ela será usada apenas uma vez então não é necessário ter um.
-    // E a escolha dela ser arrow aqui é mais por preferência do Dev
-    // window.location é um objeto do JavaScript que permite redirecionarmos a (URL) da nossa página por meio de um Script.
+      if (Email == "" || Senha == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
 
-    setTimeout(() => {
-        window.location = "Dashboard/painel.html";
-    }, "2000")
+        console.log("FORM LOGIN: ", Email);
+        console.log("FORM SENHA: ", Senha);
 
-    limparFormulario();
-    finalizarAguardar();
-} else {
-    throw ("Houve um erro ao tentar realizar o cadastro!");
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: Email,
+                senhaServer: Senha
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./Dashboard/painel.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
-} 
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
 </script>

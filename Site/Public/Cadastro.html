@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="shortcut icon" href="img/4188037.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-  <script src="Js/AlertaDiv.js"></script>
+  <script src="Js/funcoes.js"></script>
 </head>
 
 <body>
@@ -40,17 +40,18 @@
     </div>
   </div>
 
-  <!-- Começo do Banner -->
-  
-  <!-- Começo Div alerta erro -->
-  <div class="alerta_erro">
+   <!-- Começo Div alerta erro -->
+   <div class="alerta_erro">
     <div class="card_erro" id="cardErro">
       <span id="mensagem_erro"></span>
     </div>
   </div>
   <!-- Fim Div alerta erro -->
 
-    <div class="banner">
+  <!-- Começo do Banner -->
+
+<div class="banner">
+
       <div class="container">
         <div class="caixa_formulario">
           <h1>Cadastre-se</h1>
@@ -58,10 +59,13 @@
 
             <span>Nome:</span>
             <input id="nome_input" type="nome" placeholder="Nome">
+
             <span>Sobrenome:</span>
             <input id="Sobrenome_input" type="nome" placeholder="Sobrenome">
+
             <span>Data de Nascimento:</span>
             <input id="Date_input" type="date" placeholder="Data">
+           
             <span>Cpf/cnpj:</span>
             <input id="Cpf_input" type="text" placeholder="Cpf/Cnpj">
 
@@ -78,21 +82,21 @@
             <input id="senha_input" type="password" placeholder="*******">
 
             <span>Confirme a Senha:</span>
-            <input id="Confesenha_input" type="password" placeholder="*******">
+            <input id="Confirmasenha_input" type="password" placeholder="*******">
 
             <button onclick="cadastrar()">Cadastrar</button>
           </div>
-        </div>
-      </div>
 
-      <!-- Começo Div Aguardar -->
+          <!-- Começo Div Aguardar -->
       <div id="div_aguardar" class="loading-div">
         <img src="img/gifLoading.gif" id="loading-gif">
       </div>
+
+      <div id="div_erros_login"></div>
       <!-- Fim Div Aguardar -->
-
-      <img class="imgCadastro" src="../Public/img/cadasImg.jpg">
-
+        </div>
+        <img class="imgCadastro" src="img/cadasImg.jpg">
+      </div>
     </div>
   </div>
 
@@ -125,10 +129,13 @@
 </body>
 
 </html>
-
 <script>
 
   function cadastrar() {
+    aguardar();
+
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
     var Nome = nome_input.value;
     var Sobrenome = Sobrenome_input.value;
     var dtNasc = Date_input.value;
@@ -138,21 +145,23 @@
     var CEP = Cep_input.value;
     var Email = email_input.value;
     var Senha = senha_input.value;
-    var ConfirSenha = Confesenha_input.value;
+    var ConfirmaSenha = Confirmasenha_input.value;
 
 
-    if (Nome == "" || Sobrenome == "" || dtNasc == "" || CPF == "" || Cidade == "" || CEP == "" || Email == "" || Senha == "" || ConfirSenha == "") {
+    if (Nome == "" || Sobrenome == "" || dtNasc == "" || CPF == "" || Cidade == "" || CEP == "" || Email == "" || Senha == "" || ConfirmaSenha == "") {
       cardErro.style.display = "block"
-      mensagem_erro.innerHTML ="Há campos que não foram preenchidos";
+      mensagem_erro.innerHTML ="(Há campos que não foram preenchidos)";
+
       finalizarAguardar();
       return false;
+
     }else{
-      setInterval(sumirMensagem, 7000);
+      setInterval(sumirMensagem, 5000);
     }
 
     // Validação do email para saber se tem @
     if (Email.indexOf('@') >= 0) {
-      setInterval(sumirMensagem, 7000)
+      setInterval(sumirMensagem, 5000)
     } else {
       cardErro.style.display = "block"
       mensagem_erro.innerHTML ="Email inválido! Falta @";
@@ -161,7 +170,7 @@
     }
     // Validação de senha para saber se ela tem no mínimo 7 digítos
     if (Senha.length > 6) {
-      setInterval(sumirMensagem, 7000)
+      setInterval(sumirMensagem, 5000)
     } else {
       cardErro.style.display = "block"
       mensagem_erro.innerHTML ="Senha inválida! Mínimo de 7 Digítos";
@@ -169,8 +178,8 @@
       return false;
     }
     // Validação de senha para saber se elas são iguais
-    if (ConfirSenha == Senha) {
-      setInterval(sumirMensagem, 7000)
+    if (ConfirmaSenha == Senha) {
+      setInterval(sumirMensagem, 5000)
     } else {
       cardErro.style.display = "block"
       mensagem_erro.innerHTML ="As senhas não coincidem!";
@@ -179,7 +188,7 @@
     }
     // Validação de CPF para saber se ele tem 11 caracteres o - e os 2 .
     if (CPF.length > 13) {
-      setInterval(sumirMensagem, 7000)
+      setInterval(sumirMensagem, 5000)
     } else {
       cardErro.style.display = "block"
       mensagem_erro.innerHTML = "CPF inválido! CPF é composto por 14 Caracteres, exemplo: 123.456.789-00";
@@ -199,50 +208,62 @@
 
     // Validação de CEP para saber se ele possui 9 caracteres
     if (CEP.length > 8) {
-      setInterval(sumirMensagem, 7000)
+      setInterval(sumirMensagem, 5000)
     } else {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML = "CEP inválido!  CEP é composto por  9 Caracteres, exemplo: 01001-000";
       finalizarAguardar();
       return false;
     }
-    verificar();
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: Nome,
+                sobrenomeServer: Sobrenome,
+                CPFServer: CPF,
+                emailServer: Email,
+                dtNascServer: dtNasc,
+                cidadeServer: Cidade,
+                CEPServer: CEP,
+                senhaServer: Senha,
+                confirmaSenhaServer: ConfirmaSenha
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
   }
 
-  function verificar(){
-
-  // Como as inputs estavam sendo criadas apenas  na função cadastrar, decide copiar para essa função, para ela poder possuir os valores das inputs.
-    var Nome = nome_input.value;
-    var Sobrenome = Sobrenome_input.value;
-    var dtNasc = Date_input.value;
-    var CPF = Cpf_input.value;
-    var CNPJ = Cpf_input.value;
-    var Cidade = Cidade_input.value;
-    var CEP = Cep_input.value;
-    var Email = email_input.value;
-    var Senha = senha_input.value;
-    var ConfirSenha = Confesenha_input.value;
-
-    //  || CNPJ == "12.345.678/0001-00" - um possível incremento de validação.
-        
-        if (Nome == "Fernando" && Sobrenome == "Brandão" && Email == "fernando.brandão@sptech.school" && Senha == "1234567" && ConfirSenha == "1234567" && CPF == "123.456.789-00" && CEP == "01001-000" ){
-    cardErro.style.display = "block";
-    mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-    // setTimeout é um método do JavaScript que funciona como um temporizador.
-    // () = > se chama anônima arrow function, como ela é anônima, ela não possui nome, pois ela será usada apenas uma vez então não é necessário ter um.
-    // E a escolha dela ser arrow aqui é mais por preferência do Dev
-    // window.location é um objeto do JavaScript que permite redirecionarmos a (URL) da nossa página por meio de um Script.
-
-    setTimeout(() => {
-        window.location = "login.html";
-    }, "2000")
-
-    finalizarAguardar();
-} else {
-    throw ("Houve um erro ao tentar realizar o cadastro!");
+  function sumirMensagem() {
+        cardErro.style.display = "none"
     }
-}  
-
 
 </script>
