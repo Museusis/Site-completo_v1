@@ -14,77 +14,28 @@
     <link rel="shortcut icon" href="../img/4188037.png" type="image/x-icon">
   </head>
   <body>
-    <div class="janela">
-      <div class="header-left dash-header">
-        <img src="imgs/logo_navBar.png" />
+    
+    <div class="header">
+      <div class="card">
+      <div class="nav">
 
-        <div class="hello">
-          <h3>Olá, Brandão!</h3>
-        </div>
+        <img src="imgs/logo_navBar.png">
 
-        <div class="btn-nav">
-          <h3>Painel principal</h3>
-        </div>
-
-        <div class="btn-nav-white">
-          <a href="./dashboard.html">
-            <h3>Gráficos</h3>
-          </a>
-        </div>
-
-        <div class="btn-nav-white">
-          <a href="./mural.html">
-            <h3>Mural de Avisos</h3>
-          </a>
-        </div>
-
-        <div class="btn-logout" onclick="limparSessao()">
-          <a href="../index.html">
-            <h3>Sair</h3>
-          </a>
-        </div>
+      </div>
+      <div class="kpi">
+        <div id="kpi1"></div>
+        <div id="kpi2"></div>
+        <div id="kpi3"></div>
+        <div id="kpi4"></div>
       </div>
 
-      <div class="dash">
-        <div class="header">
-          <!-- <ul class="navBar">
-            <li><span id="bold">Home</span></li>
-            <li>Sobre nós</li>
-            <li><span id="ativo">Para sua empresa</span></li>
-            <li>Ajuda</li>
-            <li>Login</li>
-            <li>Cadastre-se</li>
-          </ul> -->
-        </div>
-
-        <div class="kpi">
-          <div class="kpi1">kpi1</div>
-          <div class="kpi1">kpi2</div>
-          <div class="kpi1">kpi3</div>
-          <div class="kpi1">kpi4</div>
-        </div>
-
-        <div class="informativo">Seus registros gerais estão da seguinte maneira,
-          umidade entorno de x e temperatura entorno de y, ou seja estão dentro(ou)fora do ideal
-        </div> 
-        <!-- Select do banco (x,y) -->
-
-        <div class="caixa">
-          <div class="dht11temp">
-            <section>
-              <canvas id="dht11Temperatura"></canvas>
-            </section>
-          </div>
-          <div class="dht11umid">
-            <section>
-              <canvas id="dht11Umidade"></canvas>
-            </section>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
-</html>
+    <div class="container">
+      <div class="graficos"></div>
+    </div>
+  </div>
+
+    </body>
 <script>
   /* -- dht11Umidade -- */
   var contextoDht11Umidade = document
