@@ -115,51 +115,6 @@ body {
   overflow: auto;
 }
 
-.regua{
-    display: flex;
-    margin-top: 80px;
-    color: white;
-  }
-
-.temp{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.umid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-
-.perigo-frio {
-  background-color: #facb3b;
-}
-
-.perigo-quente {
-  background-color: #ff5d2b;
-}
-
-.alerta-frio {
-  background-color: #ff5d2b;
-}
-
-.alerta-quente {
-  background-color: #facb3b;
-}
-
-.item-regua {
-  padding: 5px;
-  width: 22%;
-  margin: 15px;
-  text-align: center;
-  padding-top: 15px;
-  border-radius: 15px;
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -244,17 +199,9 @@ body {
   border-radius: 3px;
 }
 
-.btn-pink {
-  color: white;
-  background-color: #7d2c7d;
-  border-radius: 8px;
-  width: 9%;
-  height: 45px;
-}
-
 .btn-white {
-  color: #000000;
-  background-color: #9966cc;
+  color: white;
+  background-color: #7D1E7C;
   border-radius: 8px;
   width: 9%;
   height: 45px;
