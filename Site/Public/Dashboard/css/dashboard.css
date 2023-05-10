@@ -1,9 +1,5 @@
-body{
-  background-color: #A773B4;
-}
 
-.header img{
-  margin-top: 90px;
+.header .nav img{
   margin-left: -240px;
 }
 
@@ -12,5 +8,18 @@ body{
   width: 92%;
   background-color: white;
   margin-left: 60px;
-  height: 900px;
+  /* height: 900px; */
+}
+
+button{
+  color: rgb(0, 0, 0);
+  background-color: yellow;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;                
+}
+
+.nav{
+  display: flex;
+  justify-content: space-around;
 }
