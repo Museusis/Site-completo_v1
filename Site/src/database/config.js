@@ -21,8 +21,8 @@ var sql = require('mssql');
 var mySqlConfig = {
     host: "localhost",
     database: "sprint3",
-    user: "root",
-    password: "root",
+    user: "aluno",
+    password: "sptech",
 };
 
 function executar(instrucao) {
