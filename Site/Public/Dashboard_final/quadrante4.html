@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrante 4</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="./js/menuSalaB.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+      <!-- Começo do Header -->
+      <div class="header">
+        <div class="container">
+          <img class="logoNav" src="./img/logo_navBar.png" />
+    
+          <div class="menu">
+            <img onclick="clickmenu()" id="menu" src="./img/menu_icon.png">
+        </div>
+    
+           <a href="Cadastro.html"> <button onclick="btnCadastro()" class="btnCadastro">
+              Sair
+            </button></a>
+    
+        </div>
+      </div>
+      <!-- Fim do Header -->
+    <div id="mensagem"></div>
+    <div class="container">
+        <div class="cima">
+    <div class="sala">
+        <h1>Quadrante 4</h1>
+        <div class="qdt">
+            <!-- <div class="caixa_sensor">
+                <h2>Quantidade de sensores que você possui atualmente</h2>
+                <span>1</span>
+            </div> -->
+    
+</div>
+    </div>
+    <div class="kpei">
+        <div class="box_q" id="media1">
+            <span>
+                Temperatura média deste quadrante
+        </span>
+        <h3>
+            19°
+        </h3>
+    </div>
+        <div class="box_q" id="media2">
+            <span>
+                Umidade média deste quadrante
+        </span>
+        <h3>
+            17%
+        </h3>
+    </div>
+</div>
+        <div class="linha">
+            <div>
+                <canvas id="grafico_linha"></canvas>
+              </div>              
+        </div>
+    
+</div>
+<div class="baixo">
+    <div class="graficos">
+        <div class="guardar">
+            <canvas id="myChart_q"></canvas>
+          </div>
+          <div>
+            <canvas id="myChart2"></canvas>
+          </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script>
+//   const linha = document.getElementById('grafico_linha');
+  const bar1 = document.getElementById('myChart_q');
+//   const bar2 = document.getElementById('myChart2');
+//   const bar3 = document.getElementById('myChart3');
+//   const bar4 = document.getElementById('myChart4');
+
+// new Chart(linha, {
+//   type: 'line',
+//   data: {
+//     labels: [
+//     'Red',
+//     'Blue',
+//     'Yellow'
+//   ],
+//   datasets: [{
+//     label: 'My First Dataset',
+//     data: [300, 50, 100],
+//     //   borderWidth: 1,
+//       backgroundColor: [
+//       'rgb(255, 99, 132)',
+//       'rgb(54, 162, 235)',
+//       'rgb(255, 205, 86)'
+//     ],    hoverOffset: 4
+//     }]
+//   },
+//   options: {
+//         plugins: {
+//             title: {
+//                 display: true,
+//                 text: 'Relatório dos sensores',
+//             }
+//         }
+//     }
+// }
+// );
+
+// Chart.overrides[type].plugins.legend.position = 'bottom'
+
+
+new Chart(bar1, {
+        type: 'line',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [
+                {
+                    label: 'Temperatura',
+                    data: [30, 29, 28, 25, 22, 23],
+                    borderWidth: 1,
+                    backgroundColor: (Color = '#6C71E8'),
+                    borderColor: (Color = '#6C71E8'),
+                    borderWidth: 3
+                },
+                {
+                    label: 'Umidade',
+                    data: [80, 82, 80, 85, 80, 83],
+                    borderWidth: 1,
+                    backgroundColor: (Color = '#6CE5E8'),
+                    borderColor: (Color = '#6CE5E8'),
+                    borderWidth: 3
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+
+// new Chart(bar1, {
+//     type: 'line',
+//     data: {
+//       labels: ['Red', 'Blue'],
+//       datasets: [{
+//         label: '# of Votes',
+//         data: [12, 19],
+//         borderWidth: 1
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true
+//         }
+//       }
+//     }
+//   });
+
+// new Chart(bar2, {
+//     type: 'line',
+//     data: {
+//       labels: ['Red', 'Blue'],
+//       datasets: [{
+//         label: '# of Votes',
+//         data: [12, 19],
+//         borderWidth: 1
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true
+//         }
+//       }
+//     }
+//   });
+
+// new Chart(bar3, {
+//     type: 'line',
+//     data: {
+//       labels: ['Red', 'Blue'],
+//       datasets: [{
+//         label: '# of Votes',
+//         data: [12, 19],
+//         borderWidth: 1
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true
+//         }
+//       }
+//     }
+//   });
+
+// new Chart(bar4, {
+//     type: 'line',
+//     data: {
+//       labels: ['Red', 'Blue'],
+//       datasets: [{
+//         label: '# of Votes',
+//         data: [12, 19],
+//         borderWidth: 1
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true
+//         }
+//       }
+//     }
+//   });
+
+</script>

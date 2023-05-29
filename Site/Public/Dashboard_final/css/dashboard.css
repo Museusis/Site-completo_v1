@@ -1,0 +1,509 @@
+.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+}
+
+*{
+    font-family: 'Poppins';
+  }
+  
+  body{
+    margin: 0;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #320D57;
+  }
+/*   
+  .container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+  } */
+  
+  /* Começo do Header */
+  .header{
+    background-color: #ffffff;
+    border-bottom: solid #8B49CD 3px;
+    padding: 15px;
+    height: 12vh;
+  }
+  
+  .container{
+    margin-top: -25px;
+  } 
+  
+  .logoNav{
+    width: 180px;
+    height: 45px;
+    margin-top: 40px;
+    margin-left: -30px;
+  }
+  
+  .navBar{
+    width: 600px;
+    display: flex;
+    color: #320D57;
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  
+  .ativo{
+    font-weight: 1000;
+    color: #6a2b69;
+    text-shadow: 1px 0px 1px #460d57;
+  }
+  
+  .btnCadastro{
+    background-color: #ffde59;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 4px 10px 4px 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 170px;
+    float: right;
+    margin-top: -50px;
+  }
+  /* Fim do Header */
+
+.sala {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    height: 250px;
+    justify-content: space-evenly;
+}
+
+h1 {
+    margin: 0;
+    color: purple;
+    /* text-align: center; */
+}
+
+p {
+    margin: 0;
+}
+
+/* span {
+    width: 80%;
+} */
+
+h3 {
+    text-align: end;
+}
+
+.btn {
+    width: 40%;
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+button {
+    width: 100px;
+    background-color: #C6AACD;
+    color: black;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.kpei {
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box {
+    width: 40%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 65%;
+}
+
+.pizza {
+    width: 20%x;
+}
+
+.graficos {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+#box1 {
+    background-color: rgb(253, 253, 57);
+}
+
+#box2 {
+    background-color: greenyellow;
+}
+
+.header .menu #menu{
+    width: 60px;
+    height: 60px;
+    margin-left: 880px;
+    margin-top: -80px;
+    cursor: pointer;
+    }
+
+.menu_resp{
+  background-color: white; 
+  margin-left: 920px;
+  top: 130px; 
+  width: 120px; 
+  height: auto;
+  float: none;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  border-color: #8B49CD;
+}
+
+.menu_resp-q{
+  background-color: white; 
+  margin-left: 930px;
+  top: 145px; 
+  width: 150px; 
+  height: 180px;
+  float: none;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  border-color: #8B49CD;
+}
+
+li{
+  margin-right: 30px;
+  font-size: 22px;
+  list-style: none;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  line-height: 42px;
+}
+
+.banner{
+    height: 80vh;
+    width: 100%;
+}
+
+.text{
+    margin-left: 50px;
+    width: 550px;
+}
+
+.text h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9532B2;
+}
+
+.text span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text #mensal{
+  color: #9532B2;
+  font-weight: 600;
+}
+
+.pizza {
+  width: 260px;
+  height: 200px;
+}
+
+.cima {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.baixo {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.leituras{
+  width: 80%;
+  display: flex;
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.l1{
+  background-color: #FF4929;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.l1 #title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  margin-left: 23px;
+}
+
+.l1 span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 70px;
+}
+
+.l2{
+  background-color: #83F46B;
+  height: 200px;
+  width: 200px;
+  margin-left: 20px;
+  border-radius: 110px;
+}
+
+.l2 #title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  margin-left: 23px;
+}
+
+.l2 span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 65px;
+}
+
+.l3{
+  background-color: #FFE57D;
+  height: 200px;
+  width: 200px;
+  margin-left: 20px;
+  border-radius: 110px;
+}
+
+.l3 #title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  margin-left: 23px;
+}
+
+.l3 span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 65px;
+}
+
+.caixa_alerta{
+  margin-left: 100px;
+  background-color: #C6AACD;
+  width: 550px;
+  height: 230px;
+}
+
+.caixa_alerta h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 30px;
+  height: 200px;
+  width: 500px;
+  line-height: 35px;
+  margin-left: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.caixa_alerta #salaB {
+  color: #7D1E7C;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.caixa_sensor{
+  background-color: #C6AACD;
+  width: 280px;
+  height: 230px;
+  position: absolute;
+  margin-top: -580px;
+  margin-left: 850px;
+}
+
+.caixa_sensor h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 10px;
+  height: 200px;
+  width: 200px;
+  line-height: 35px;
+  margin-left: 30px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.caixa_sensor span{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 100px;
+}
+
+#grafico_pizza2{
+  position: absolute;
+}
+
+.graficoPizza{
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin-left: 850px;
+  margin-top: -260px;
+}
+
+.metricas{
+  margin-top: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caixaMetricaGreen h4{
+  margin-top: 10px;
+  margin-left: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.caixaMetricaGreen ul li{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.caixaMetricaRed h4{
+  margin-top: 10px;
+  margin-left: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.caixaMetricaRed ul li{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.caixaMetricaYellow h4{
+  margin-top: 10px;
+  margin-left: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.caixaMetricaYellow ul li{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.caixaMetricaRed{
+  margin-left: 20px;
+  height: 150px;
+  width: 180px;
+  background-color: #FF4929;
+}
+
+.caixaMetricaGreen{
+  margin-left: 20px;
+  height: 150px;
+  width: 180px;
+  background-color: #83F46B;
+}
+
+.caixaMetricaYellow{
+  margin-left: 20px;
+  height: 150px;
+  width: 180px;
+  background-color: #FFDE59;
+}
+
+.box_q {
+  width: 45%;
+  background-color: rgb(2, 12, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 65%;
+}
+
+#myChart_q{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  height: 50vh; 
+  width: 60vw;
+  margin-top: 20px;
+  margin-left: 290px
+}
+
+.guardar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+#media1 {
+  background-color: #C6AACD;
+  margin-left: 50px;
+}
+
+#media2 {
+  background-color:#C6AACD;
+}
+
+

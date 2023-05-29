@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala A</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="./js/menuSalaA.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+  <style>
+   span {
+    width: 80%;
+  }
+</style>
+
+      <!-- Começo do Header -->
+      <div class="header">
+        <div class="container">
+          <img class="logoNav" src="logo_navBar.png" />
+    
+          <div class="menu">
+            <img onclick="clickmenu()" id="menu" src="menu_icon.png">
+        </div>
+    
+           <a href="Cadastro.html"> <button onclick="btnCadastro()" class="btnCadastro">
+              Sair
+            </button></a>
+    
+        </div>
+      </div>
+      <!-- Fim do Header -->
+    <div id="mensagem"></div>
+    <div class="container">
+        <div class="cima">
+    <div class="sala">
+        <h1>Sala A</h1>
+        <p>Monitore por cada quadrante:</p>
+        <div class="btn">
+          <button><a href='quadrante.html'>Quadrante 1</a> </button>
+          <button><a href='quadrante2.html'>Quadrante 2</a> </button>
+          <button><a href='quadrante3.html'>Quadrante 3</a> </button>
+          <button><a href='quadrante4.html'>Quadrante 4</a> </button>
+</div>
+    </div>
+    <div class="kpei">
+        <div class="box" id="box1">
+            <span>
+                Quadrante com a maior variação de temperatura ou umidade.
+        </span>
+        <h3>
+            Quadrante 2
+        </h3></div>
+        <div class="box" id="box2">
+            <span>
+                Porcentagem de quadrantes em conformidade com os limites ideais de temperatura e umidade:
+        </span>
+        <h3>
+            12%
+        </h3>
+    </div>
+</div>
+        <div class="pizza">
+            <div>
+                <canvas id="grafico_pizza"></canvas>
+              </div>              
+        </div>
+    
+</div>
+<div class="baixo">
+    <div class="graficos">
+        <div>
+            <canvas id="myChart1"></canvas>
+          </div>
+          <div>
+            <canvas id="myChart2"></canvas>
+          </div>
+          <div>
+            <canvas id="myChart3"></canvas>
+          </div>
+          <div>
+            <canvas id="myChart4"></canvas>
+          </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script>
+  const pizza = document.getElementById('grafico_pizza');
+  const bar1 = document.getElementById('myChart1');
+  const bar2 = document.getElementById('myChart2');
+  const bar3 = document.getElementById('myChart3');
+  const bar4 = document.getElementById('myChart4');
+
+new Chart(pizza, {
+  type: 'pie',
+  data: {
+    labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
+    //   borderWidth: 1,
+      backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],    hoverOffset: 4
+    }]
+  },
+//   options: {
+//         plugins: {
+//             title: {
+//                 display: true,
+//                 text: 'Relatório dos sensores',
+//             }
+//         }
+//     }
+}
+);
+
+// Chart.overrides[type].plugins.legend.position = 'bottom'
+
+new Chart(bar1, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+new Chart(bar2, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+new Chart(bar3, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+new Chart(bar4, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Principal</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <!-- <script src="painelP.js"></script> -->
+    <script src="./js/menuPainel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+      <!-- Começo do Header -->
+  <div class="header">
+    <div class="container">
+      <img class="logoNav" src="./img/logo_navBar.png" />
+
+      <div class="menu">
+        <img onclick="clickmenu()" id="menu" src="./img/menu_icon.png">
+    </div>
+
+       <a href="Cadastro.html"> <button onclick="btnCadastro()" class="btnCadastro">
+          Sair
+        </button></a>
+
+    </div>
+  </div>
+  <!-- Fim do Header -->
+  
+<div id="mensagem"></div>
+
+<div class="banner">
+
+    <div class="text">
+        <h2>Bem vindo(a) ao Painel Principal de Monitoramento</h2>
+        <span>Acompanhe as Médias de Temperatura e Umidade <span id="mensal"> mensal</span> no seu Museu. 
+            Para informações especificas, clique nos indicadores coloridos ou acesse suas salas pelo menu!</span>
+    </div>
+
+        <div class="leituras">
+            <div class="l1">
+                <span id="title">Média de alertas críticos</span id="title">
+                <span>3%</span>
+            </div>
+            <div class="l2">
+                <span id="title">Média de leituras estáveis </span id="title">
+                <span>85%</span>
+            </div>
+            <div class="l3">
+                <span id="title">Média de alertas de risco</span id="title">
+                <span>20%</span>
+            </div>
+        </div>
+<div class="caixa_alerta">
+    <h2>A taxa de alertas próximos a ultrapassar a temperatura ou umidade ideal da <span id="salaB" onclick="verSala()">Sala B</span> esteve acima do esperado este mês. 
+        Procure dar atenção especial para determinada sala. </h2>
+</div>
+
+<div class="caixa_sensor">
+    <h2>Quantidade de sensores que você possui atualmente</h2>
+    <span>115</span>
+</div>
+
+<div class="graficoPizza">
+    <div class="pizza">
+        <div>
+            <canvas id="grafico_pizza2"></canvas>
+        </div>              
+    </div>
+
+    <!-- </div>
+    <div class="baixo">
+    <div class="graficos">
+    <div>
+        <canvas id="myChart1"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart2"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart3"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart4"></canvas> -->
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+    <!-- fim do gráfico -->
+
+    <div class="metricas">
+        <div  class="caixaMetricaRed">
+            <h4>Crítico</h4>
+            <ul>
+                <li>10º C</li>
+                <li>44%</li>
+            </ul>
+        </div>
+
+        <div class="caixaMetricaYellow">
+            <h4>Alerta</h4>
+            <ul>
+                <li>12º - 14ºC</li>
+                <li>46% - 48%</li>
+            </ul>
+        </div>
+
+        <div class="caixaMetricaGreen">
+            <h4>Ideal</h4>
+            <ul>
+                <li>16º - 18ºC</li>
+                <li>50% - 55%</li>
+            </ul>
+        </div>
+
+        <div class="caixaMetricaYellow">
+            <h4>Alerta</h4>
+            <ul>
+                <li>20º - 22ºC</li>
+                <li>50% - 55%</li>
+            </ul>
+        </div>
+
+        <div class="caixaMetricaRed">
+            <h4>Crítico</h4>
+            <ul>
+                <li>24º C</li>
+                <li>61%</li>
+            </ul>
+        </div>
+    </div>
+
+
+  
+
+</body>
+</html>
+
+<script>
+    const pizza = document.getElementById('grafico_pizza2');
+  const bar1 = document.getElementById('myChart1');
+  const bar2 = document.getElementById('myChart2');
+  const bar3 = document.getElementById('myChart3');
+  const bar4 = document.getElementById('myChart4');
+
+new Chart(pizza, {
+  type: 'pie',
+  data: {
+    labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
+    //   borderWidth: 1,
+      backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],    hoverOffset: 4
+    }]
+  },
+}
+);
+
+</script>
