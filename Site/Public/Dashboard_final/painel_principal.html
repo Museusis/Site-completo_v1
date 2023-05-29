@@ -10,6 +10,9 @@
     <script src="./js/menuPainel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script src="../js/funcoes.js"></script>
+    <script src="./alerta.js"></script>
+
 </head>
 <body>
       <!-- Começo do Header -->
@@ -21,7 +24,7 @@
         <img onclick="clickmenu()" id="menu" src="./img/menu_icon.png">
     </div>
 
-       <a href="Cadastro.html"> <button onclick="btnCadastro()" class="btnCadastro">
+       <a href="../login.html"> <button onclick="btnCadastro()" class="btnCadastro">
           Sair
         </button></a>
 
@@ -32,6 +35,8 @@
 <div id="mensagem"></div>
 
 <div class="banner">
+    <div id="alerta">
+    </div>
 
     <div class="text">
         <h2>Bem vindo(a) ao Painel Principal de Monitoramento</h2>
