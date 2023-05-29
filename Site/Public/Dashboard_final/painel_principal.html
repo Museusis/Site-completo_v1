@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Principal</title>
     <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="../js/funcoes.js"></script>
     <!-- <script src="painelP.js"></script> -->
     <script src="./js/menuPainel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,7 +15,7 @@
     <script src="./alerta.js"></script>
 
 </head>
-<body>
+<body onload=" atualizarFeed()">
       <!-- Começo do Header -->
   <div class="header">
     <div class="container">
@@ -39,7 +40,7 @@
     </div>
 
     <div class="text">
-        <h2>Bem vindo(a) ao Painel Principal de Monitoramento</h2>
+        <h2>Bem vindo(a) <span id="b_usuario">usuário</span> ao Painel Principal de Monitoramento</h2>
         <span>Acompanhe as Médias de Temperatura e Umidade <span id="mensal"> mensal</span> no seu Museu. 
             Para informações especificas, clique nos indicadores coloridos ou acesse suas salas pelo menu!</span>
     </div>
@@ -146,6 +147,9 @@
 </html>
 
 <script>
+
+b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
     const pizza = document.getElementById('grafico_pizza2');
   const bar1 = document.getElementById('myChart1');
   const bar2 = document.getElementById('myChart2');
