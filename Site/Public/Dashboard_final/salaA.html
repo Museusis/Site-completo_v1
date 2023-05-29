@@ -97,25 +97,47 @@
   const bar3 = document.getElementById('myChart3');
   const bar4 = document.getElementById('myChart4');
 
-new Chart(pizza, {
+  new Chart(pizza, {
   type: 'pie',
   data: {
     labels: [
-    'Red',
-    'Blue',
-    'Yellow'
+    'Ativo',
+    'Em manutenção',
+    'Inativo'
   ],
   datasets: [{
-    label: 'My First Dataset',
+    label: 'Sensores',
     data: [300, 50, 100],
     //   borderWidth: 1,
       backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
+      'rgb(128, 0, 128)',
+      'rgb(186, 85, 211)',
+      'rgb(160,160,160)'
     ],    hoverOffset: 4
     }]
   },
+// }
+// );
+
+// new Chart(pizza, {
+//   type: 'pie',
+//   data: {
+//     labels: [
+//     'Red',
+//     'Blue',
+//     'Yellow'
+//   ],
+//   datasets: [{
+//     label: 'My First Dataset',
+//     data: [300, 50, 100],
+//     //   borderWidth: 1,
+//       backgroundColor: [
+//       'rgb(255, 99, 132)',
+//       'rgb(54, 162, 235)',
+//       'rgb(255, 205, 86)'
+//     ],    hoverOffset: 4
+//     }]
+//   },
 //   options: {
 //         plugins: {
 //             title: {

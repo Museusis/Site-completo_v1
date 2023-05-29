@@ -83,3 +83,6 @@ join empresa as filial on matriz.idEmpresa=filial.fkEmpresaMatriz
 join sala on fkEmp_S=matriz.idEmpresa
 join sensor on fkSala=idSala
 join registro on fkSensor=idSensor;
+
+-- painel status sensor
+-- na sala qtd de sensores nessa sala/ quadrante
